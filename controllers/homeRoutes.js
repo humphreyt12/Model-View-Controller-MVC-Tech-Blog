@@ -27,6 +27,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+//GET response by blog id
 router.get('/blog/:id', async (req, res) => {
   try {
     const blogData = await Blog.findByPk(req.params.id, {
@@ -43,7 +44,7 @@ router.get('/blog/:id', async (req, res) => {
     });
 
     const blog = blogData.get({ plain: true });
-
+    //Creating the blog
     res.render('blog', {
       ...blog,
       logged_in: req.session.logged_in
@@ -64,6 +65,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
+    //Creating the dashboard
     res.render('dashboard', {
       ...user,
       logged_in: true
@@ -82,7 +84,7 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
-
+//If the user dose not have a login, redirect the page for the user to signup
 router.get('/signUp', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/dashboard');
