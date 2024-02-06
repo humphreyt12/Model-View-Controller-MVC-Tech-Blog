@@ -10,7 +10,7 @@ if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize( // Use environment variables to connect to database
     process.env.DB_NAME,
     process.env.DB_USER,
-    process.env.DB_PW,
+    process.env.DB_PASSWORD,
     {
       // Database location
       host: 'localhost',
