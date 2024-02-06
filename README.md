@@ -50,9 +50,9 @@ THEN I am able to view posts and comments but I am prompted to log in again befo
 ```
 
 ## Website-Link
-Click the Heroku link to view the application
+Click the Heroku link below to view the application
 
-(link will be added soon)
+https://murmuring-ocean-36955-1319a87838d0.herokuapp.com/
 
 ## Installation
 
