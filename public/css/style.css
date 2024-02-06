@@ -1,3 +1,9 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 /* Styling the body of the page */
 body {
   background-color: rgb(137, 207, 240);
